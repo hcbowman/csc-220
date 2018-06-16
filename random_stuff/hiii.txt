@@ -1,0 +1,12 @@
+220
+a.exe
+alllist.txt
+alllist2.txt
+alllist3.tx
+hi.c
+hiii.txt
+list.txt
+list2.txt
+list3.txt
+list4.txt
+sorted.txt
