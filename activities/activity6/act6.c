@@ -1,4 +1,8 @@
-main()
+#include <stdio.h>
+#include <string.h>
+
+
+int main()
 {
     char a[10], b[10], *p, *combine();
 
@@ -8,6 +12,8 @@ main()
     p = combine(a, b);
 
     printf("%s\n", p);
+	
+	return 0;
 }
 
 char *combine(char *s, char *t) {
@@ -16,7 +22,7 @@ char *combine(char *s, char *t) {
     strcpy(r, s);
     y = strlen(r);
     for (x = y; *t != '\0'; ++x)
-        r[x] = *t++;
+        r[x] = (*t)++;
     r[x] = '\0';
 
     return(r);
