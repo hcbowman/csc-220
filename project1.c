@@ -1,14 +1,18 @@
 #include<stdio.h>
+#include<stdlib.h>
+
 
 unsigned int easydecrypt(char c);
 unsigned int easyencrypt(char c);
 
 int main() {
-  int c;
   
   while ( (c = getc(stdin)) != EOF) {
     printf("%d\n", easyencrypt(c));
-	/*printf("%c %d", easydecrypt(c), easydecrypt(c));*/
+	
+	c2 = easyencrypt(c);
+	
+	printf("%d\n", easydecrypt(c2));
     c++;
   }
 
@@ -18,20 +22,19 @@ int main() {
 }
 
 
-unsigned int easydecrypt(char c){
-	char a;
-	a = c - 100;
+unsigned int easydecrypt(unsigned int c){
+	int a;
+	a = ((c/2));
 	
 	
 	return a;
 }
 
 unsigned int easyencrypt(char c){
-	char a;
-	a = c + 100;
+	int a;
+	a = (c + c);
 	
 	return a;
 }
-
 
   
