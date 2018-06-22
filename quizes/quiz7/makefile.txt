@@ -1,0 +1,13 @@
+
+matrix: project2.o matrix.o
+	gcc -ansi -pedantic -Wall
+
+project2.o : project2.c matrix.h
+	gcc -ansi -pedantic -Wall
+
+matrix.o : matrix.c matrix.h
+	gcc -ansi -pedantic -Wall
+
+.PHONY: clean
+clean:
+	rm -f project2.o matrix.o
