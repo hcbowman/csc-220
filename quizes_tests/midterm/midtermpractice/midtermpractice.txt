@@ -1,0 +1,27 @@
+NAME:_____________________
+Midterm Practice
+5 points
+Submit your answers on Canvas.  Include your output when asked.
+
+1. What command did you use to extract this tar file?
+I used "tar xf midtermpractice.tar." "x" is used to specify the mode, extraction, and "f" is used to specify the name of the TAR archive, upon which we are preforming the action.
+
+
+2. List all the files/directories in the most recently created directory.  What command did you use to find the most recent directory?  Include sample output of the directory listing.
+tar tvf midtermpractice.tar | grep ^d | head -n1
+ls -ltr | grep ^d | tail -n1
+
+drwxr-xr-x+ 1 Brooke Plumb Brooke Plumb   0 Jun 23  2017 code
+
+
+
+3. Find the file file30 using a UNIX command.  What command did you use?  What are the contents of that file?
+
+find ./midtermpractice -name file30 -exec cat {} +
+You found it.
+
+
+4. Find midpractice.c & the compile warnings/errors in midpractice.c.  List what changes you had to make.  Give sample output.
+
+
+

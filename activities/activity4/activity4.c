@@ -1,17 +1,23 @@
+
+
+
+
 #include<stdio.h>
 #include<string.h>
 
 int main() {
 
-  int ii;
   char words[] = "Computer Science";
+  char *p;
 
-  for (ii=0;ii<strlen(words);ii++) {
-     if((words[ii] >= 'A') && (words[ii] <='Z')) {
-       putchar(words[ii] - ('A' - 'a'));
+
+
+  for (p = words; p<strlen(words); (p)++) {
+     if((p >= 'A') && (p <='Z')) {
+       putchar(p - ('A' - 'a'));
      }
      else {
-       putchar(words[ii]);
+       putchar(p);
      }
   }
   putchar('\n');

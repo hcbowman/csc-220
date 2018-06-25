@@ -1,49 +1,21 @@
-#include "activity3.h"
+#include <stdio.h>
+#include "mymath.h"
 
-int gcd(int x, int y) {
-	
-	if (y > 0) {
-		return gcd(y, x%y);
-	} else {
-		return x;
-	}
-	
-	return 0;
-	
+
+#define PI 3.14159
+
+
+int main() {
+  int radius;
+  double area;
+
+  printf("Enter the radius: ");
+  scanf("%d", &radius);
+
+  area = PI * square(radius);
+
+  printf ("The area of a circle with radius %d is %.2f\n", radius, area);
+
+  return 0;
 }
 
-void escape(char s[], char t[]) {
-	
-	int i = 0;
-	int j = 0;
-	
-	while(t[i] != '\0') {
-		
-		switch(t[i]) {
-			
-			case '\t':
-                s[j] = '\\';
-                ++j;
-                s[j] = 't';
-                break;
-				
-            case '\n':
-                s[j] = '\\';
-                ++j;
-                s[j] = 'n';
-                break;
-				
-            default:
-                s[j] = t[i];
-                break;
-				
-        }
-		
-        ++i;
-        ++j;
-		
-	}
-	
-	s[j] = '\0';
-	
-}
