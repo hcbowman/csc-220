@@ -1,4 +1,4 @@
-NAME:_____________________
+NAME:____Hunter Bowman_________________
 Midterm Practice
 5 points
 Submit your answers on Canvas.  Include your output when asked.
@@ -22,6 +22,53 @@ You found it.
 
 
 4. Find midpractice.c & the compile warnings/errors in midpractice.c.  List what changes you had to make.  Give sample output.
+/* Print the first N multiples of the number entered */
+I had to change the function "multiple" to an int and return ret. for the pointer arithmatic i had to do *(b+ii) to fill 
+the array, it was inccorect becuase it was not derefrencing the pointer.
 
+Enter a number
+9
+The multiples of 9 are : 0 9 18 27 36 45 54 63 72
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int multiple(int a, int b)
+{	
+	int ret;
+	ret = a * b;
+	return ret;
+}
+
+int main()
+{
+   int a, *b;
+   int ii, y;
+
+
+   printf("Enter a number\n");
+   scanf("%d",&a);  
+
+   b = (int *) malloc(a);
+
+   /* Fill array b using pointer arithmetic */
+   for (ii=0; ii<a; ii++) {
+	   y = multiple(a,ii);
+	   *(b + ii) = y;
+	   
+	}
+   
+   
+   
+   /* Print array b using array indexing */
+   printf ("The multiples of %d are : ",a);
+   for (ii=0; ii<a; ii++) {
+	   printf("%d ",b[ii]);
+	   
+   }
+   
+   return (0);
+}
 
 
