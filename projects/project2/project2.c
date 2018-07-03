@@ -1,32 +1,49 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 
+#include"matrix.h"
 
-
-/* Create a new matrix */
-matrix_t * new_matrix(int rows, int cols)
-	
-	
-/* Neatly print the matrix */
-void print_matrix(const matrix_t * matrix)
-	
-	
-/* Get/Set the value at row, col */
-int get_value(const matrix_t * matrix, int row, int col)
-	
-void set_value(matrix_t * matrix, int row, int col, int value)
-	
-	
-/* Return the sum of two matrices */
-matrix_t * add(const matrix_t * m1, const matrix_t * m2)
-	
-	
-/* Return the transpose of a matrix */
-matrix_t * transpose(const matrix_t * matrix)
 	
 	
 	
 
-int main() {
+int main(int argc, char **argv) {
+	
+	matrix_t * A;
+	matrix_t * B;
+	
+	int rows, cols, rows2, cols2;
+	FILE *fp1;
+	FILE *fp2;
+	
+	fp1 = fopen(argv[1], "r");
+    fp2 = fopen(argv[2], "r");
+	
+	
+	fscanf(fp1, "%d %d", &rows, &cols);
+	fscanf(fp2, "%d %d", &rows2, &cols2);
+	
+	printf("Rows:%d, Cols:%d\n", rows, cols);
+	
+	A = new_matrix(rows,cols);
+	print_matrix(A);
+	
+
+	printf("\nRows:%d, Cols:%d\n", rows2, cols2);
+	
+	B = new_matrix(rows2,cols2);
+	print_matrix(B);
+	
+	
+	C = add(A,B);
+	print_matrix(C);
+	
+	
+	
+	fclose(fp1);
+    fclose(fp2);
+	return 0;
 	
 	
 	
