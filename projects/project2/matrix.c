@@ -74,14 +74,28 @@ void set_value(matrix_t * matrix, int row, int col, int value) {
 /* Return the sum of two matrices */
 matrix_t * add(const matrix_t * m1, const matrix_t * m2) {
 	
-	int row, col;
-	for (col = 1; col <= m1->cols; col++) {
-		for (row = 1; row <= m1->rows; row++) {
-			Mat(m3, row, col) = Mat(m1, row, col) + Mat(m2, row, col);
+	int x, y;
+	
+	/*matrix_t * m = (matrix_t *)malloc( sizeof( matrix_t ) );
+	
+	
+	(*m).data = (int*)calloc(m1->rows, sizeof(int*));
+	
+	
+	for (i=0; i<m2->cols; i++) {
+		((*m).data)[i] = (void*)calloc( m2->cols, sizeof(int));
+	}
+	
+	(*m).rows = m1->rows;
+	(*m).cols = m2->cols;*/
+	
+	for (y = 1; y <= m1->cols; y++) {
+		for (x = 1; x <= m1->rows; x++) {
+			Mat(m1, x, y) = Mat(m1, x, y) + Mat(m2, x, y);
 		}
 	}
 	
-	return m3;
+	return 0;
 }
 	
 	

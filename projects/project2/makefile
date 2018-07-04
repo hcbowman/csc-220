@@ -7,4 +7,4 @@ matrix.o : matrix.c
 
 .PHONY: clean
 clean:
-	rm -f *.o *.exe
+	rm -f *.o *.exe *.stackdump

@@ -36,8 +36,12 @@ int main(int argc, char **argv) {
 	print_matrix(B);
 	
 	
-	C = add(A,B);
-	print_matrix(C);
+	A = add(A,B);
+	print_matrix(A);
+	
+	
+	A = transpose(A);
+	print_matrix(A);
 	
 	
 	
