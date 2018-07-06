@@ -7,4 +7,12 @@ int Contractor::pay() {
 	} else {
 		return (payrate * hours);
 	}
+
+void Contractor::setHours(int h) {
+	if (h < max_hours)
+		hours = h;
+	else
+		hours = max_hours;
+
+	}
 }
