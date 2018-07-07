@@ -21,7 +21,7 @@ int main(int argc, char **argv) {
     fp2 = fopen(argv[2], "r");
 	
 	
-	fscanf(fp1, "%d %d", &rows, &cols);
+	fscanf(fp1, "%d %d", &rows, &cols); //use fgets(buffer,sizeof(int)* 8, matrix)
 	fscanf(fp2, "%d %d", &rows2, &cols2);
 	
 	printf("Rows:%d, Cols:%d\n", rows, cols);

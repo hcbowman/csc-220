@@ -21,11 +21,15 @@ matrix_t * new_matrix(int rows, int cols) {
 	(*m).data = (int *) malloc(rows*cols*sizeof(int));
 	
 	
-	for (i=0; i<rows*cols; i++) {
+	for (i=0; i<rows*cols; i++) { // not needed
 		(*m).data[i] = i;
 	}
 	
 	return m;
+	/*
+	(*m).data = (int *) calloc(rows*cols, sizeof(int)); //if you want to initialize malloc vs calloc
+	
+	*/
 	
 	
 	

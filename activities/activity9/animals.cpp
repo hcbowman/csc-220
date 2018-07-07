@@ -58,10 +58,10 @@ class Bird : public Animal {
   public:
     Bird(string s="Pretty bird!") : Animal(s) {}
 
-    void speak () {
-      cout << "Squwak!!! " << endl;
-    }
-	
+	void speak () {
+		cout << "Squwak!!! " << endl;
+	}
+
 	void move () {
 		cout << ": FLYYYY!" << endl;
 	}
