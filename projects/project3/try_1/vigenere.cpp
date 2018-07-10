@@ -6,7 +6,7 @@ using namespace std;
 void Vigenere::encrypt(std::string key) {
   unsigned int i, j;
 
-  for (int i = 0, j = 0; i < message.length(); ++i) {
+  for (i = 0, j = 0; i < message.length(); ++i) {
 
     char c = message[i];
     message[i] += (c + key[j] - 2 * 'A') % 26 + 'A';
@@ -19,7 +19,7 @@ void Vigenere::encrypt(std::string key) {
 void Vigenere::decrypt(std::string key) {
   unsigned int i, j;
 
-  for (int i = 0, j = 0; i < message.length(); ++i) {
+  for (i = 0, j = 0; i < message.length(); ++i) {
 
     char c = message[i];
     message[i] += (c - key[j] + 26) % 26 + 'A';

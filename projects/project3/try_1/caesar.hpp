@@ -9,8 +9,10 @@ using namespace std;
 class Caesar : public Secret {
 
 	public:
-		Caesar(std::string m, std::string k) : Secret (m, k) {
+		std::string key;
 
+		Caesar(std::string m, std::string k) : Secret (m) {
+			key = k;
 		}
 
 		void encrypt(std::string key);

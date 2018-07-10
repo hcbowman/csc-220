@@ -9,8 +9,10 @@ using namespace std;
 class Vigenere : public Secret {
 
 	public:
-		Vigenere(std::string m, std::string k) : Secret (m, k) {
+		std::string key;
 
+		Vigenere(std::string m, std::string k) : Secret (m) {
+			key = k;
 		}
 
 		void encrypt(std::string key);

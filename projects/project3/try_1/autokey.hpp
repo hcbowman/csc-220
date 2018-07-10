@@ -9,8 +9,10 @@ using namespace std;
 class Autokey : public Secret {
 
 	public:
-		Autokey(std::string m, std::string k) : Secret (m, k) {
+		std::string key;
 
+		Autokey(std::string m, std::string k) : Secret (m) {
+			key = k;
 		}
 
 		void encrypt(std::string key);

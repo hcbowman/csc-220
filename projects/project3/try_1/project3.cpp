@@ -11,8 +11,8 @@ using namespace std;
 
 void print_cipher(Secret * s) {
   s->display();
-	cout << "encrypt : " << s->encrypt() << endl;
-	cout << "decrypt : " << s->decrypt() << endl;
+	cout << "encrypt : " << s->encrypt(std::string key) << endl;
+	cout << "decrypt : " << s->decrypt(std::string key) << endl;
 }
 
 int main() {
