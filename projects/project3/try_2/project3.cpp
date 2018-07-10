@@ -5,6 +5,8 @@
 #include"caesar.hpp"
 #include"vigenere.hpp"
 
+using namespace std;
+
 
 
 int main() {
