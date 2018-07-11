@@ -15,6 +15,7 @@ void Caesar::encrypt(std::string key) {
     }
 
   }
+  cout << "Message: " << message << endl;
 
 }
 
@@ -30,5 +31,6 @@ void Caesar::decrypt(std::string key) {
     }
 
   }
+  cout << "Message: " << message << endl;
 
 }

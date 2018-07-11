@@ -14,6 +14,8 @@ void Vigenere::encrypt(std::string key) {
 
   }
 
+  cout << "Message: " << message << endl;
+
 }
 
 void Vigenere::decrypt(std::string key) {
@@ -26,5 +28,7 @@ void Vigenere::decrypt(std::string key) {
     j = (j + 1) % key.length();
 
   }
+  
+  cout << "Message: " << message << endl;
 
 }

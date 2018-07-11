@@ -15,6 +15,7 @@ void Autokey::encrypt(std::string key) {
     }
 
   }
+  cout << "Message: " << message << endl;
 
 
 }
@@ -31,5 +32,6 @@ void Autokey::decrypt(std::string key) {
     }
 
   }
+  cout << "Message: " << message << endl;
 
 }

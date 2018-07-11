@@ -4,14 +4,12 @@
 #include<iostream>
 #include"secret.hpp"
 
-using namespace std;
 
 class Vigenere : public Secret {
 
 	public:
-		std::string key;
 
-		Vigenere(std::string m, std::string k) : Secret (m) {
+		Vigenere(std::string m, std::string k) : Secret (m, k) {
 			key = k;
 		}
 

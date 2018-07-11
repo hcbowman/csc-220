@@ -3,16 +3,13 @@
 
 class Secret {
 
-	//protected:
-		//std::string key;
-
-
 	public:
 		std::string message;
+		std::string key;
 
-		Secret(std::string m) {
+		Secret(std::string m, std::string k) {
 			message = m;
-			//key = k;
+			key = k;
 		}
 
 		virtual void encrypt(std::string key) = 0;

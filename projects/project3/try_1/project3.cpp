@@ -1,5 +1,6 @@
 #include<iostream>
-
+#include<string>
+#include<iomanip>
 #include"secret.hpp"
 #include"autokey.hpp"
 #include"caesar.hpp"
@@ -7,12 +8,15 @@
 
 using namespace std;
 
+
 #define C_SIZE 3
+#define KEY "key"
+
 
 void print_cipher(Secret * s) {
   s->display();
-	cout << "encrypt : " << s->encrypt(std::string key) << endl;
-	cout << "decrypt : " << s->decrypt(std::string key) << endl;
+	s->encrypt(KEY);
+	s->decrypt(KEY);
 }
 
 int main() {

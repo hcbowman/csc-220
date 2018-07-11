@@ -4,14 +4,12 @@
 #include<iostream>
 #include"secret.hpp"
 
-using namespace std;
 
 class Autokey : public Secret {
 
 	public:
-		std::string key;
 
-		Autokey(std::string m, std::string k) : Secret (m) {
+		Autokey(std::string m, std::string k) : Secret (m, k) {
 			key = k;
 		}
 
