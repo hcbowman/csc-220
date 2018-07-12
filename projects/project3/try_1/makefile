@@ -1,5 +1,4 @@
-//not done
-CC=g++ 
+CC=g++
 CPPFLAGS=--std=c++11 -Wall -pedantic
 
 all: project3.cpp secret.o vigenere.o caesar.o autokey.o
