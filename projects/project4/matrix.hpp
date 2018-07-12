@@ -12,21 +12,18 @@ class Matrix {
 
 	public:
 
-		Matrix(int r, int c) {
-      rows = r;
-      columns = c;
-		}
+		Matrix(int rows, int columns);
+    Matrix( const Matrix &obj);
     ~Matrix();
 
-    print
-    add
-    scalar_multiplcation
-    transpose
+    void print();
+    void add(const Matrix& a, const Matrix& b);
+    scalar_multiplcation;
+    void transpose(Matrix& m);
 
-
-    + (addition)
-    * (scalar multiplication)
-    << (stream injection)
+    Matrix operator+();     // + (addition)
+    Matrix operator*();     // * (scalar multiplication)
+    Matrix operator<<();    // << (stream injection)
 
 
 };
