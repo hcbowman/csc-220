@@ -12,20 +12,29 @@ class Matrix {
 
 	public:
 
-		Matrix(int rows, int columns);
+    std::vector< std::vector<int> > v;
+
+		Matrix(int r, int c);
     Matrix( const Matrix &obj);
     ~Matrix();
 
     void print();
     void add(const Matrix& a, const Matrix& b);
-    scalar_multiplcation;
+    void mult(const Matrix& a, const Matrix& b);
     void transpose(Matrix& m);
 
-    Matrix operator+();     // + (addition)
-    Matrix operator*();     // * (scalar multiplication)
-    Matrix operator<<();    // << (stream injection)
+    Matrix operator+(const Matrix& that) const;     // + (addition)
+    Matrix operator*(const int);     // * (scalar multiplication)
+
+    friend ostream& operator<< (ostream& strm, const Matrix& m);
 
 
 };
+
+
+ostream& operator<< (ostream& strm, const MyClass& m) {
+  strm << "[" << m.a << "]";
+  return strm;
+}
 
 #endif

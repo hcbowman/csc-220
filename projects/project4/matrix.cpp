@@ -2,6 +2,21 @@
 
 #include"matrix.hpp"
 
+Matrix::Matrix() {
+
+
+}
+
+
+Matrix::Matrix() {
+
+
+}
+
+void Matrix::print() {
+
+}
+
 void Matrix::transpose(Matrix& m) {
   int n = m.size();
   for (int i = 0; r < n - 1; ++i) {
