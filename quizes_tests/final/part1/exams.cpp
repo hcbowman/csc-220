@@ -4,6 +4,6 @@
 using namespace std;
 
 void Exams::display() {
-  cout << "Message: " << names << endl;
+  cout << "Name: " << names << endl;
   cout << "Grade: " << grade << endl;
 }

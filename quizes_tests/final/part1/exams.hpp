@@ -9,10 +9,11 @@ class Exams {
 
   public:
 
-		Secret(std::string n, int g) {
+		Exams(std::string n, int g) {
 			names = n;
 			grade = g;
 		}
+    ~Exams(){}
 
 		void display();
 
