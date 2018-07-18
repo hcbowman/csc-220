@@ -10,12 +10,12 @@ class Matrix {
 
     int rows, columns;
 
-	public:
-
     std::vector< std::vector<int> > v;
 
+	public:
+
 		Matrix(int r, int c);
-    Matrix( const Matrix &obj);
+    Matrix( const Matrix &m);
     ~Matrix();
 
     void print();
@@ -23,9 +23,8 @@ class Matrix {
     void mult(const Matrix& a, const Matrix& b);
     void transpose(Matrix& m);
 
-    Matrix operator+(const Matrix& that) const;     // + (addition)
-    Matrix operator*(const int);     // * (scalar multiplication)
-
+    Matrix operator+(const Matrix& that) const;
+    Matrix operator*(const int);
     friend ostream& operator<< (ostream& strm, const Matrix& m);
 
 
